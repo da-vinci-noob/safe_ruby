@@ -1,4 +1,5 @@
-source 'https://rubygems.org'
+# Copyright (c) 2018 Uku Taht
+# frozen_string_literal: true
 
 source('https://rubygems.org')
 

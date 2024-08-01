@@ -21,6 +21,7 @@ AllCops:
 
 Style/Copyright:
   Enabled: true
+  AutocorrectNotice: '# Copyright (c) 2018 Uku Taht'
 
 Lint/ConstantResolution: # Not available ins rubocop 0.81
   Enabled: false
@@ -67,6 +68,8 @@ Layout/RedundantLineBreak:
   
 Style/DisableCopsWithinSourceCodeDirective:
   Enabled: true
+  AllowedCops: ['Style/OptionHash', 'Security/Eval', 'Security/MarshalLoad',
+  'Metrics/AbcSize', 'Metrics/MethodLength']
 
 Layout/EndOfLine:
   EnforcedStyle: lf

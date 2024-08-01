@@ -1,4 +1,5 @@
-#!/usr/bin/env rake
+# Copyright (c) 2018 Uku Taht
+# frozen_string_literal: true
 
 Dir['tasks/**/*.rake'].each { |t| load t }
 

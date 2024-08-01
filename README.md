@@ -2,8 +2,8 @@ Safe Ruby
 =========
 
 Safe Ruby provides a way to run untrusted ruby code outside of the current process in a safe environment.
-Creating this environment is largery based on jruby sandbox, whitelisting the methods one can use on potentially
-dangerous classes. Constants are also whitelisted, eliminating some core ruby functionality such as spawning
+Creating this environment is largery based on jruby sandbox, allowlisting the methods one can use on potentially
+dangerous classes. Constants are also allowlisted, eliminating some core ruby functionality such as spawning
 another process.
 
 Getting Started
