@@ -11,6 +11,10 @@ unit tests:
   script:
     - bundle exec rake spec
 
+code_quality:
+  script:
+    - bundle exec rake quality:all
+
 unit tests ruby2.7:
   image: ruby:2.7
   before_script:

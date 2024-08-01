@@ -1,9 +1,17 @@
 #!/usr/bin/env rake
 
-require 'bundler/gem_tasks'
-require 'rspec/core/rake_task'
+Dir['tasks/**/*.rake'].each { |t| load t }
 
-RSpec::Core::RakeTask.new
+desc 'Continous integration tasks'
+task :ci do
+  [
+    'test:spec',
+    :rubocop
+  ].each do |name|
+    puts "\n=== Running #{name}...\n"
+    Rake::Task[name].invoke
+    puts "\n=== Running #{name} -> Done\n"
+  end
+end
 
-desc 'Run specs'
-task :default => :spec
+task default: :ci
