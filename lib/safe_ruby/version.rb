@@ -5,7 +5,7 @@
 class SafeRuby
   MAJOR_VERSION = 1
   MINOR_VERSION = 0
-  RELEASE_VERSION = 5
+  RELEASE_VERSION = 6
 
   private_constant :MAJOR_VERSION
   private_constant :MINOR_VERSION

@@ -15,7 +15,6 @@ class SafeRuby
   }.freeze
   private_constant :DEFAULTS
 
-  # rubocop:disable Style/OptionHash
   def self.eval(code, options = {})
     new(code, options).eval
   end
@@ -59,9 +58,7 @@ class SafeRuby
 
     data = read.read
     begin
-      # rubocop:disable Security/MarshalLoad
-      Marshal.load(data)
-      # rubocop:enable Security/MarshalLoad
+      YAML.safe_load(data)
     rescue StandardError
       raise(data) if @raise_errors
 
@@ -79,7 +76,6 @@ class SafeRuby
     file.write(
       <<~STRING
         result = eval(%q(#{@code}))
-        print Marshal.dump(result)
       STRING
     )
     file.rewind
